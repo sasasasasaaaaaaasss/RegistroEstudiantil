@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8FF">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="APK PARA EL REGISTRO DE ESTUDIANTES"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#4A148C"
+            android:layout_gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <EditText
+                android:id="@+id/nombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Nombre completo"
+                android:background="@android:drawable/edit_text"
+                android:padding="10dp"/>
+
+            <EditText
+                android:id="@+id/edad"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:hint="Edad"
+                android:inputType="number"
+                android:background="@android:drawable/edit_text"
+                android:padding="10dp"/>
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroupGenero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+            <RadioButton
+                android:id="@+id/Masculino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masculino"/>
+            <RadioButton
+                android:id="@+id/Femenino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Femenino"
+                android:layout_marginStart="16dp"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datos Académicos"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#6A1B9A"
+            android:layout_marginBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/Carrera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/prompt_carrera"
+            android:layout_marginBottom="8dp"/>
+
+
+        <Spinner
+            android:id="@+id/Semestre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:prompt="@string/prompt_semestre"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Materias de Interés:"
+            android:textStyle="bold"
+            android:textColor="#6A1B9A"
+            android:layout_marginBottom="8dp"/>
+        <CheckBox
+            android:id="@+id/Matematicas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matemáticas"/>
+        <CheckBox
+            android:id="@+id/Programación"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Programación"/>
+        <CheckBox
+            android:id="@+id/Inglés"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inglés"/>
+        <CheckBox
+            android:id="@+id/Estadística"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estadística"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Información Adicional"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#6A1B9A"
+            android:layout_marginBottom="8dp"/>
+        <CheckBox
+            android:id="@+id/checkBoxBeca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Tiene beca?"
+            android:layout_marginBottom="12dp"/>
+        <EditText
+            android:id="@+id/editTextObservaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Observaciones"
+            android:background="@android:drawable/edit_text"
+            android:minLines="3"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <Button
+                android:id="@+id/buttonRegistrar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Registrar al Estudiante"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#7B1FA2"/>
+            <Button
+                android:id="@+id/buttonLimpiar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Limpiar Campos"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#9575CD"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listViewEstudiantes"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:dividerHeight="1dp"
+            android:background="#EDE7F6"
+            android:padding="8dp"/>
+    </LinearLayout>
+</ScrollView>

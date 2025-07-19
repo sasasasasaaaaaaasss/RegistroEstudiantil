@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Registro Estudiantil</string>
+    <string name="prompt_carrera">Seleccione carrera</string>
+    <string name="prompt_semestre">Seleccione semestre</string>
+</resources>
